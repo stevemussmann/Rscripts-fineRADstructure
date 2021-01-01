@@ -85,7 +85,7 @@ analysisName <- opt$prefix;  maxIndv <- 10000; maxPop<-10000
 
 
 ### 4) EDIT THE PATH TO YOUR COPY of FinestructureLibrary.R
-source("/home/mussmann/local/src/fineRADstructure/FinestructureLibrary.R", chdir = TRUE) # read in the R functions, which also calls the needed packages
+source("/home/mussmann/local/scripts/R/Rscripts-fineRADstructure/FinestructureLibrary.R", chdir = TRUE) # read in the R functions, which also calls the needed packages
 
 ### 5) EXECUTE THE CODE ABOVE AND THE REST OF THE CODE BELOW
 ## make some colours
@@ -121,11 +121,6 @@ popdendclear<-fixMidpointMembers(popdendclear) # needed for obscure dendrogram r
 ########################
 ## Plot 1: COANCESTRY MATRIX
 fullorder<-labels(tdend) # the order according to the tree
-print(fullorder)
-nrow(dataraw)
-ncol(dataraw)
-length(fullorder)
-setdiff(fullorder, rownames(dataraw))
 datamatrix<-dataraw[fullorder,fullorder] # reorder the data matrix
 
 tmpmat<-datamatrix 
